@@ -1,5 +1,5 @@
-import chalk from "chalk";
-import conclean from "conclean";
+import chalk from 'chalk';
+import conclean from 'conclean';
 
 /**
  * Displays a styled welcome message in the CLI.
@@ -15,24 +15,31 @@ import conclean from "conclean";
  * @param {string} [options.version=""] - Version number.
  */
 export default function conwelcome({
-	title = "ADD A HEADING",
-	tagLine = "",
-	description = "",
-	bgColor = "#ffffff",
-	color = "#000000",
+	title = 'ADD A HEADING',
+	tagLine = '',
+	description = '',
+	bgColor = '#ffffff',
+	color = '#000000',
 	bold = true,
 	clear = true,
-	version = "",
+	version = ''
 } = {}) {
 	// Clear console if enabled
 	if (clear) conclean();
 
 	// Create styled text
-	const bg = bold ? chalk.hex(bgColor).inverse.bold : chalk.hex(bgColor).inverse;
+	const bg = bold
+		? chalk.hex(bgColor).inverse.bold
+		: chalk.hex(bgColor).inverse;
 	const clr = bold ? chalk.hex(color).bold : chalk.hex(color);
 
 	// Display welcome message
-	console.log("\n" + clr(`${bg(` ${title} `)}`) + (version ? ` v${version}` : "") + ` ${chalk.dim(tagLine)}`);
+	console.log(
+		'\n' +
+			clr(`${bg(` ${title} `)}`) +
+			(version ? ` v${version}` : '') +
+			` ${chalk.dim(tagLine)}`
+	);
 	if (description) console.log(chalk.dim(description));
 	console.log();
 }
