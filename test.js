@@ -3,13 +3,13 @@ import welcome from './index.js';
 // Use it.
 welcome({
 	title: `Welcome CLI`,
-	tagLine: `by Awais.dev`,
+	tagLine: `by sumnagal karan`,
 	description: `Create a welcome message for your CLI.`,
 	bgColor: `#FADC00`,
 	color: `#000000`,
 	bold: true,
 	clear: true,
-	version: `1.0`
+	version: `1.0.0`
 });
 
 console.log(`\n\n\n\n\n`);
