@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "description": "Welcome header for Node.js CLI software.",
   "license": "MIT",
-  "repository": "ahmadawais/cli-welcome",
+  "repository": "https://github.com/sumangal44/conwelcome",
   "author": {
     "name": "sumangal karan",
     "email": "sumangalkaran44@gmail.com",
